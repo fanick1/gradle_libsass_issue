@@ -1,0 +1,22 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.11
+group = 'com.foobar'
+description = 'Libsass issue'
+
+project.tasks.create('explodes'){
+    doLast {
+        System.load(project.file("libjsass-5.7.1-libsass-3.5.3.so").getAbsolutePath());
+    }
+}
+
+project.tasks.create('good'){
+    doLast {
+        System.load(project.file("libjsass-5.7.0-libsass-3.5.2.so").getAbsolutePath());
+    }
+}
+wrapper {
+    gradleVersion = '6.6'
+}
+
