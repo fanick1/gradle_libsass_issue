@@ -1,89 +1,38 @@
-Process 3578 (java) of user 1000 dumped core.
-Stack trace of thread 3718:
-0  0x00007f5d7acdae35 raise (libc.so.6)
-1  0x00007f5d7acc5895 abort (libc.so.6)
-2  0x00007f5d7ad1e08f __libc_message (libc.so.6)
-3  0x00007f5d7ad2540c malloc_printerr (libc.so.6)
-4  0x00007f5d7ad26d5c _int_free (libc.so.6)
-5  0x00007f5c55b7f1a2 _ZNSt6locale5_Impl16_M_install_facetEPKNS_2idEPKNS_5facetE (/home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so)
-6  0x00007f5c55b7d273 _ZNSt6locale5_ImplC1Em (/home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so)
-7  0x00007f5c55b7e1e5 _ZNSt6locale18_S_initialize_onceEv (/home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so)
-8  0x00007f5d7b08fd7f __pthread_once_slow (libpthread.so.0)
-9  0x00007f5c55b7e231 _ZNSt6locale13_S_initializeEv (/home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so)
-10 0x00007f5c55b7e273 _ZNSt6localeC1Ev (/home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so)
-11 0x00007f5c55b7f4ec _ZNSt8ios_base4InitC2Ev (/home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so)
-12 0x00007f5c559c1a2d n/a (/home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so)
-13 0x00007f5d7b0eef4a call_init.part.0 (ld-linux-x86-64.so.2)
-14 0x00007f5d7b0ef051 _dl_init (ld-linux-x86-64.so.2)
-15 0x00007f5d7b0f2fae dl_open_worker (ld-linux-x86-64.so.2)
-16 0x00007f5d7add9dd9 _dl_catch_exception (libc.so.6)
-17 0x00007f5d7b0f282e _dl_open (ld-linux-x86-64.so.2)
-18 0x00007f5d7ae6a39c dlopen_doit (libdl.so.2)
-19 0x00007f5d7add9dd9 _dl_catch_exception (libc.so.6)
-20 0x00007f5d7add9e73 _dl_catch_error (libc.so.6)
-21 0x00007f5d7ae6ab09 _dlerror_run (libdl.so.2)
-22 0x00007f5d7ae6a42a dlopen@@GLIBC_2.2.5 (libdl.so.2)
-23 0x00007f5d7a414821 _ZN2os8dll_loadEPKcPci (libjvm.so)
-24 0x00007f5d7a1460e1 JVM_LoadLibrary (libjvm.so)
-25 0x00007f5d79195ef8 Java_java_lang_ClassLoader_00024NativeLibrary_load0 (libjava.so)
-26 0x00007f5d5cc2f890 n/a (n/a)
-27 0x00007f5d5cc29410 n/a (n/a)
-28 0x00007f5d5cc29410 n/a (n/a)
-29 0x00007f5d5cc29410 n/a (n/a)
-30 0x00007f5d5cc29410 n/a (n/a)
-31 0x00007f5d5cc29c43 n/a (n/a)
-32 0x00007f5d5cc29c43 n/a (n/a)
-33 0x00007f5d5cc29c43 n/a (n/a)
-34 0x00007f5d5cc29a96 n/a (n/a)
-35 0x00007f5d5cc299c0 n/a (n/a)
-36 0x00007f5d5cc299c0 n/a (n/a)
-37 0x00007f5d5cc29a96 n/a (n/a)
-38 0x00007f5d5cc20849 n/a (n/a)
-39 0x00007f5d7a09a189 _ZN9JavaCalls11call_helperEP9JavaValueRK12methodHandleP17JavaCallArgumentsP6Thread (libjvm.so)
-40 0x00007f5d7a4b9f1d _ZL6invokeP13InstanceKlassRK12methodHandle6Handleb14objArrayHandle9BasicTypeS5_bP6Thread.constprop.80 (libjvm.so)
-41 0x00007f5d7a4bc242 _ZN10Reflection13invoke_methodEP7oopDesc6Handle14objArrayHandleP6Thread (libjvm.so)
-42 0x00007f5d7a149f61 JVM_InvokeMethod (libjvm.so)
-43 0x00007f5d647b6e30 n/a (n/a)
-44 0x00007f5d5d57c524 n/a (n/a)
-45 0x00007f5d5cc299c0 n/a (n/a)
-46 0x00007f5d5cc299c0 n/a (n/a)
-47 0x00007f5d5cc299c0 n/a (n/a)
-48 0x00007f5d5cc29a96 n/a (n/a)
-49 0x00007f5d5cc299c0 n/a (n/a)
-50 0x00007f5d5cc299c0 n/a (n/a)
-51 0x00007f5d5cc29c43 n/a (n/a)
-52 0x00007f5d5cc29c43 n/a (n/a)
-53 0x00007f5d5cc29c88 n/a (n/a)
-54 0x00007f5d5cc29c88 n/a (n/a)
-55 0x00007f5d5cc29c43 n/a (n/a)
-56 0x00007f5d5cc29c88 n/a (n/a)
-57 0x00007f5d5cc29c88 n/a (n/a)
-58 0x00007f5d5cc29c43 n/a (n/a)
-59 0x00007f5d5cc29c88 n/a (n/a)
-60 0x00007f5d5cc29a96 n/a (n/a)
-61 0x00007f5d5d565554 n/a (n/a)
-62 0x00007f5d5cc29c88 n/a (n/a)
-63 0x00007f5d5cc29c43 n/a (n/a)
-012Stack trace of thread 3716:
-0  0x00007f5d7a474420 _ZN12PhaseIterGVN21add_users_to_worklistEP4Node (libjvm.so)
-1  0x00007f5d7a525302 _ZN14PhaseIdealLoop11do_split_ifEP4Node (libjvm.so)
-2  0x00007f5d7a2c976f _ZN14PhaseIdealLoop20split_if_with_blocksER9VectorSetR10Node_Stackb (libjvm.so)
-3  0x00007f5d7a2c3316 _ZN14PhaseIdealLoop18build_and_optimizeEbbb (libjvm.so)
-4  0x00007f5d79e4e1b9 _ZN7Compile8OptimizeEv (libjvm.so)
-5  0x00007f5d79e4f9da _ZN7CompileC2EP5ciEnvP10C2CompilerP8ciMethodibbbP12DirectiveSet (libjvm.so)
-6  0x00007f5d79d5b3e1 _ZN10C2Compiler14compile_methodEP5ciEnvP8ciMethodiP12DirectiveSet (libjvm.so)
-7  0x00007f5d79e599cc _ZN13CompileBroker25invoke_compiler_on_methodEP11CompileTask (libjvm.so)
-8  0x00007f5d79e5b548 _ZN13CompileBroker20compiler_thread_loopEv (libjvm.so)
-9  0x00007f5d7a5d858d _ZN10JavaThread17thread_main_innerEv (libjvm.so)
-10 0x00007f5d7a5d8937 _ZN10JavaThread3runEv (libjvm.so)
-11 0x00007f5d7a41d090 _ZL19thread_native_entryP6Thread (libjvm.so)
-12 0x00007f5d7b0884c0 start_thread (libpthread.so.0)
-13 0x00007f5d7ad9f133 __clone (libc.so.6)
-012Stack trace of thread 3578:
-0  0x00007f5d7b089a08 __GI___pthread_timedjoin_ex (libpthread.so.0)
-1  0x00007f5d7ae78e9d ContinueInNewThread0 (libjli.so)
-2  0x00007f5d7ae75502 ContinueInNewThread (libjli.so)
-3  0x00007f5d7ae76b08 JLI_Launch (libjli.so)
-4  0x00000000004009d7 main (java)
-5  0x00007f5d7acc6f43 __libc_start_main (libc.so.6)
-6  0x0000000000400a75 _start (java)
+ldd --version
+ldd (GNU libc) 2.29
+
+
+#0  __GI_raise (sig=sig@entry=6) at ../sysdeps/unix/sysv/linux/raise.c:50
+#1  0x00007f53e689d895 in __GI_abort () at abort.c:79
+#2  0x00007f53e68f608f in __libc_message (action=action@entry=do_abort, fmt=fmt@entry=0x7f53e6a04a7e "%s\n") at ../sysdeps/posix/libc_fatal.c:181
+#3  0x00007f53e68fd40c in malloc_printerr (str=str@entry=0x7f53e6a02c22 "free(): invalid pointer") at malloc.c:5366
+#4  0x00007f53e68fed5c in _int_free (av=<optimized out>, p=<optimized out>, have_lock=<optimized out>) at malloc.c:4185
+#5  0x00007f52c3b121a2 in std::locale::_Impl::_M_install_facet(std::locale::id const*, std::locale::facet const*) () from /home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so
+#6  0x00007f52c3b10273 in std::locale::_Impl::_Impl(unsigned long) () from /home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so
+#7  0x00007f52c3b111e5 in std::locale::_S_initialize_once() () from /home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so
+#8  0x00007f53e6c67d7f in __pthread_once_slow (once_control=0x7f52c3dfbdb8 <std::locale::_S_once>, init_routine=0x7f52c3b111d0 <std::locale::_S_initialize_once()>) at pthread_once.c:116
+#9  0x00007f52c3b11231 in std::locale::_S_initialize() () from /home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so
+#10 0x00007f52c3b11273 in std::locale::locale() () from /home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so
+#11 0x00007f52c3b124ec in std::ios_base::Init::Init() () from /home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so
+#12 0x00007f52c3954a2d in _GLOBAL__sub_I_ast.cpp () from /home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so
+#13 0x00007f53e6cc6f4a in call_init (l=<optimized out>, argc=argc@entry=21, argv=argv@entry=0x7ffccbb3e758, env=env@entry=0x7ffccbb3e808) at dl-init.c:72
+#14 0x00007f53e6cc7051 in call_init (env=0x7ffccbb3e808, argv=0x7ffccbb3e758, argc=21, l=<optimized out>) at dl-init.c:30
+#15 _dl_init (main_map=main_map@entry=0x7f52cc039f10, argc=21, argv=0x7ffccbb3e758, env=0x7ffccbb3e808) at dl-init.c:119
+#16 0x00007f53e6ccafae in dl_open_worker (a=a@entry=0x7f53903fdcd0) at dl-open.c:510
+#17 0x00007f53e69b1dd9 in __GI__dl_catch_exception (exception=exception@entry=0x7f53903fdcb0, operate=operate@entry=0x7f53e6ccabc0 <dl_open_worker>, args=args@entry=0x7f53903fdcd0) at dl-error-skeleton.c:196
+#18 0x00007f53e6cca82e in _dl_open (file=0x7f52cc03b0d0 "/home/x/gitrepos/libsass_issue/libjsass-5.7.1-libsass-3.5.3.so", mode=-2147483647, caller_dlopen=0x7f53e5fec821 <os::dll_load(char const*, char*, int)+65>, nsid=-2, argc=21, argv=<optimized out>, env=0x7ffccbb3e808) at dl-open.c:592
+#19 0x00007f53e6a4239c in dlopen_doit (a=a@entry=0x7f53903fdef0) at dlopen.c:66
+#20 0x00007f53e69b1dd9 in __GI__dl_catch_exception (exception=exception@entry=0x7f53903fde90, operate=operate@entry=0x7f53e6a42340 <dlopen_doit>, args=args@entry=0x7f53903fdef0) at dl-error-skeleton.c:196
+#21 0x00007f53e69b1e73 in __GI__dl_catch_error (objname=objname@entry=0x7f52cc03b050, errstring=errstring@entry=0x7f52cc03b058, mallocedp=mallocedp@entry=0x7f52cc03b048, operate=operate@entry=0x7f53e6a42340 <dlopen_doit>, args=args@entry=0x7f53903fdef0) at dl-error-skeleton.c:215
+#22 0x00007f53e6a42b09 in _dlerror_run (operate=operate@entry=0x7f53e6a42340 <dlopen_doit>, args=args@entry=0x7f53903fdef0) at dlerror.c:170
+#23 0x00007f53e6a4242a in __dlopen (file=<optimized out>, mode=<optimized out>) at dlopen.c:87
+#24 0x00007f53e5fec821 in os::dll_load(char const*, char*, int) () from /usr/java/jdk-11.0.4/lib/server/libjvm.so
+#25 0x00007f53e5d1e0e1 in JVM_LoadLibrary () from /usr/java/jdk-11.0.4/lib/server/libjvm.so
+#26 0x00007f53e4d6def8 in Java_java_lang_ClassLoader_00024NativeLibrary_load0 () from /usr/java/jdk-11.0.4/lib/libjava.so
+#27 0x00007f53c8c2f890 in ?? ()
+#28 0x00007f53c8c29680 in ?? ()
+#29 0x0000000000000008 in ?? ()
+#30 0x00000000eb1b9688 in ?? ()
+#31 0x00007f53903fe9f8 in ?? ()
+#32 0x0000000000000000 in ?? ()
+
